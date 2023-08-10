@@ -1,0 +1,33 @@
+---
+interface Props{
+    title: string 
+}
+const {title} = Astro.props
+import Navbar from './Navbar.astro'
+---
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fernando Urzúa {'| '+ title}</title>
+	</head>
+	<body >
+        <header class="relative">
+            <Navbar />
+        </header>
+        <slot />
+	</body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+  *{
+    padding: 0px;
+    margin: 0px;
+    font-family:'Poppins',sans-seriff;
+    box-sizing:border-box;
+  }
+</style>
