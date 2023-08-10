@@ -1,45 +1,82 @@
 ---
 type link = {
-	name: string,
-	url:string
-}
+  name: string;
+  url: string;
+};
 
-let navbar:link[] = [
-	{
-		name: 'home',
-		url:'#'
-	},
-    {
-        name:'tecnologias',
-        url:'#tecnologias'
-    },
-    {
-        name:'educación',
-        url:'#'
-    },
-    {
-        name:'trabajos',
-        url:'#'
-    },
-    {
-        name:'contacto',
-        url:'#'
-    }
-]
+let navbar: link[] = [
+  {
+    name: "home",
+    url: "#",
+  },
+  {
+    name: "tecnologias",
+    url: "#tecnologias",
+  },
+  
+  {
+    name: "trabajos",
+    url: "#",
+  },
+  {
+    name: "contacto",
+    url: "#",
+  },
+];
 ---
-    <nav class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 p-6 text-white ">
-        <a href="#" id="logo" >logo</a>
-        <ul class="flex gap-8 ">
-            {
-                navbar.map((nav)=>(
-                    <li><a class="hover:underline text-lg" href={nav.url}>{nav.name}</a></li>
-                ))
-            }
-        </ul>
-    </nav>
+
+<nav
+  class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 p-6 text-white"
+>
+  <a href="#" id="logo">logo</a>
+  <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative">
+    {
+      navbar.map((nav) => (
+        <li>
+          <a class="hover:underline text-md" href={nav.url}>
+            {nav.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <button id="mobilebtn" class="btn z-10"
+    ><span class="material-symbols-outlined"> menu</span></button
+  >
+  <ul
+    id="mobilenav"
+    class="absolute flex text-black bg-white flex-col top-0 left-full justify-center items-center w-screen h-screen gap-8"
+  >
+    {
+      navbar.map((nav) => (
+        <li>
+          <a class="hover:underline text-lg" href={nav.url}>
+            {nav.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
 
 <style>
-   nav{
-    transition: .5s ease;
-   } 
+  nav {
+    transition: 0.5s ease;
+  }
+  .btn {
+    width: 30px;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+  #mobilenav{
+    transition: .4s ease;
+  }
 </style>

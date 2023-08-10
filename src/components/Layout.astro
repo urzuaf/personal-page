@@ -1,46 +1,103 @@
 ---
-interface Props{
-    title: string 
+interface Props {
+  title: string;
 }
-const {title} = Astro.props
-import Navbar from './Navbar.astro'
+const { title } = Astro.props;
+import Navbar from "./Navbar.astro";
 ---
+
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Fernando Urzúa {'| '+ title}</title>
-	</head>
-	<body class="scroll-smooth" >
-        <header class="relative">
-            <Navbar />
-        </header>
-        <slot />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-	</body>
+    <title>Fernando Urzúa {"| " + title}</title>
+  </head>
+  <body class="scroll-smooth">
+    <header class="relative">
+      <Navbar />
+    </header>
+    <slot />
+  </body>
   <script>
-   window.addEventListener("scroll",()=>{
-    const nav = document.querySelector('nav')
-    console.log(nav)
-    nav.classList.toggle('bg-white', window.scrollY > 0)
-    nav.classList.toggle('text-black', window.scrollY > 0)
-   }) 
-</script>
+    let width: number = window.innerWidth;
+    let mobilebtn = document.getElementById("mobilebtn");
+    let normalnav = document.getElementById("normalnav");
+    let mobilenav = document.getElementById("mobilenav");
+    let mobileactive = true;
+
+    let menu = document.createElement("span");
+    let close = document.createElement("span");
+    menu.classList.add("material-symbols-outlined");
+    close.classList.add("material-symbols-outlined");
+    menu.innerText = "menu";
+    close.innerText = "close";
+    displayNavbar(width);
+
+    window.addEventListener("resize", () => {
+      width = window.innerWidth;
+      displayNavbar(width);
+    });
+
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("text-black", window.scrollY > 0);
+      nav.classList.toggle("bg-white", window.scrollY > 0);
+      window.scrollY > 0
+        ? (mobilebtn.style.color = "black")
+        : (mobilebtn.style.color = "white");
+    });
+
+    mobilebtn.addEventListener("click", () => {
+      if (mobileactive) {
+        mobilenav.style.left = "0";
+        mobilebtn.replaceChildren(close);
+        mobilebtn.style.color = "black";
+      } else {
+        mobilenav.style.left = "100%";
+        mobilebtn.replaceChildren(menu);
+        window.scrollY > 0
+          ? (mobilebtn.style.color = "black")
+          : (mobilebtn.style.color = "white");
+      }
+      mobileactive = !mobileactive;
+    });
+
+    function displayNavbar(width: number) {
+      if (width > 900) {
+        mobilebtn.style.display = "none";
+        normalnav.style.display = "flex";
+      } else {
+        normalnav.style.display = "none";
+        mobilebtn.style.display = "flex";
+      }
+    }
+
+ 
+  </script>
 </html>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-  *{
+  * {
     padding: 0px;
     margin: 0px;
-    font-family:'Poppins',sans-seriff;
-    box-sizing:border-box;
+    font-family: "Poppins", sans-seriff;
+    box-sizing: border-box;
   }
-  .oposite{
-      color: #121212;
-      background-color: white;
-    }
+  .oposite {
+    color: #121212;
+    background-color: white;
+  }
 </style>
