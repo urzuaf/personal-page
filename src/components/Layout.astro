@@ -34,6 +34,7 @@ import Navbar from "./Navbar.astro";
     let mobilebtn = document.getElementById("mobilebtn");
     let normalnav = document.getElementById("normalnav");
     let mobilenav = document.getElementById("mobilenav");
+    let logo = document.getElementById("logo");
     let mobileactive = true;
 
     let menu = document.createElement("span");
@@ -53,9 +54,15 @@ import Navbar from "./Navbar.astro";
       const nav = document.querySelector("nav");
       nav.classList.toggle("text-black", window.scrollY > 0);
       nav.classList.toggle("bg-white", window.scrollY > 0);
-      window.scrollY > 0
-        ? (mobilebtn.style.color = "black")
-        : (mobilebtn.style.color = "white");
+      if (window.scrollY > 0) {
+        mobilebtn.style.color = "black";
+        normalnav.style.color = "black";
+        logo.style.color = "black"
+      } else {
+        mobilebtn.style.color = "white";
+        normalnav.style.color = "white";
+        logo.style.color = "white"
+      }
     });
 
     mobilebtn.addEventListener("click", () => {
@@ -82,8 +89,6 @@ import Navbar from "./Navbar.astro";
         mobilebtn.style.display = "flex";
       }
     }
-
- 
   </script>
 </html>
 
@@ -99,5 +104,8 @@ import Navbar from "./Navbar.astro";
   .oposite {
     color: #121212;
     background-color: white;
+  }
+  body{
+    overflow-x: hidden;
   }
 </style>

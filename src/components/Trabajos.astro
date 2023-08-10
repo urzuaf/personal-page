@@ -1,0 +1,36 @@
+---
+import trabajos from '../data/trabajos.json'
+---
+
+<section id="trabajos" class=" bg-emerald-100 text-black pb-40">
+  <div class="p-20 m-auto">
+        <h2 class="text-3xl font-semibold text-center">Trabajos</h2>
+  </div>
+  <div class="p-8 flex flex-col md:flex-row justify-center gap-8">
+    {
+        trabajos.map((trabajo)=>(
+            <div class="text-black bg-white shadow-lg flex flex-col max-w-sm border rounded gap-4 p-2 ">    
+                <img class="w-full rounded " src={trabajo.img} alt={trabajo.nombre} />
+                <h3 class="text-center font-semibold text-lg">{trabajo.nombre}</h3>
+                <p class="px-4 text-sm text-zinc-500">herramientas: {trabajo.tecnologias}</p>
+                <p class="px-4">{trabajo.descripción}</p>
+                <a class="btn p-4 text-center mb-4" href={trabajo.url} target="_blank" >Ver en vivo</a>
+            </div>
+        ))
+    }
+
+    </div>  
+</section>
+<style>
+    .btn{
+		position: relative;
+		border: 2px solid #2aea7d;
+		padding: 16px 32px;
+		transition: .3s ease;
+	}
+	.btn:hover{
+		background: #2aea7d;
+		transition: .3s ease;
+	}
+    
+</style>
