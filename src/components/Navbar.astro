@@ -27,13 +27,19 @@ let navbar:link[] = [
     }
 ]
 ---
-<nav class="fixed top-0 z-10 text-white flex w-full justify-between px-20 p-8 bg-black ">
-    <a href="#" id="logo" >logo</a>
-    <ul class="flex gap-8 ">
-        {
-            navbar.map((nav)=>(
-                <li><a class="hover:underline text-lg" href={nav.url}>{nav.name}</a></li>
-            ))
-        }
-    </ul>
-</nav>
+    <nav class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 p-6 text-white ">
+        <a href="#" id="logo" >logo</a>
+        <ul class="flex gap-8 ">
+            {
+                navbar.map((nav)=>(
+                    <li><a class="hover:underline text-lg" href={nav.url}>{nav.name}</a></li>
+                ))
+            }
+        </ul>
+    </nav>
+
+<style>
+   nav{
+    transition: .5s ease;
+   } 
+</style>

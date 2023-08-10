@@ -6,10 +6,10 @@ import Tecnologias from '../components/Tecnologias.astro';
 
 <Layout title='Homepage'>
 		<section id="home" class="banner">
-			<div class="textBox flex flex-col gap-2  w-full ml-20 ">
-				<h1 class="text-5xl font-semibold">Hola, soy <br> <span class="text-6xl font-bold">Fernando Urzúa</span></h1>
-				<h3 class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, veritatis.</h3>
-				<a href="#" class="btn text-2xl mt-4 w-fit" >Call to action</a>
+			<div class="textBox flex flex-col gap-2  w-full ">
+				<h1 class="text-2xl  md:text-5xl font-semibold">Hola, soy <br> <span class="text-3xl md:text-6xl font-bold">Fernando Urzúa</span></h1>
+				<h3 class="text-lg md:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, veritatis.</h3>
+				<a href="#" class="btn md:text-2xl mt-4 w-fit" >Call to action</a>
 			</div>
 	
 		</section>
@@ -18,9 +18,11 @@ import Tecnologias from '../components/Tecnologias.astro';
 
 <style>
 	.banner{
+		margin-left: -11px;
+		margin-right: -1px;
 		position: relative;
 		min-height: 95vh;
-		background: url('banner.jpg');
+		background: url('fondo2.png');
 		background-size: cover;
 		background-position: right;
 		display: flex;
@@ -28,6 +30,18 @@ import Tecnologias from '../components/Tecnologias.astro';
 		align-items: center;
 		color:white;
 	}
+	.textBox{
+		padding: calc(5rem + 11px);
+	}
+	@media (max-width:700px) {
+		.textBox{
+			padding: calc(2rem + 11px);
+		}
+		.banner{
+			background-image: url('fondo1.png');
+		}
+	}	
+	
 	.btn{
 		position: relative;
 		background: #2196f3;

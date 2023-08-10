@@ -18,7 +18,16 @@ import Navbar from './Navbar.astro'
             <Navbar />
         </header>
         <slot />
+
 	</body>
+  <script>
+   window.addEventListener("scroll",()=>{
+    const nav = document.querySelector('nav')
+    console.log(nav)
+    nav.classList.toggle('bg-white', window.scrollY > 0)
+    nav.classList.toggle('text-black', window.scrollY > 0)
+   }) 
+</script>
 </html>
 
 <style>
@@ -30,5 +39,8 @@ import Navbar from './Navbar.astro'
     font-family:'Poppins',sans-seriff;
     box-sizing:border-box;
   }
-  
+  .oposite{
+      color: #121212;
+      background-color: white;
+    }
 </style>
