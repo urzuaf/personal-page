@@ -1,0 +1,31 @@
+---
+import techs from '../data/technologies.json'
+---
+
+
+<section id="tecnologias" class="bg-white text-zinc-900 h-screen">
+    <div class="p-20 m-auto">
+        <h2 class="text-3xl font-semibold text-center">Tecnologias</h2>
+    </div>
+    <div id="techcontainer">
+    {
+        techs.map((tech)=>(
+            <div class="flex gap-20 m-auto px-20 py-8 justify-center max-w-full items-center mb-10 flex-col md:flex-row">
+                <img class="w-full md:w-96" src={tech.img} alt={tech.alt} />
+                <div class="flex flex-col text-left  gap-4">
+                    <h3 class="text-2xl font-medium ">{tech.title}</h3>
+                    <p class="">{tech.body}</p>
+                </div>
+            </div>
+        ))
+    }
+    </div>
+</section>
+
+<style>
+    p{
+        max-width: 50ch;
+    }
+    
+
+</style>

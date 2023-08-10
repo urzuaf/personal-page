@@ -1,0 +1,27 @@
+[
+    {
+        "title":"HTML, CSS, Javascript",
+        "body":"Los pilares del desarrollo web. Responsables de la estructura, el estilo y la interactividad y dinamismo de cada sitio web. Juntos, permiten la creación de experiencias online envolventes y funcionales.",
+        "img":"html-css-js.png",
+        "alt":"html, css, javascript"
+    },
+    {
+
+        "title":"Frameworks de Frontend",
+        "body":"Para construir aplicaciones web más complejas muchas veces es necesario utilizar un framework de desarrollo. Personalmente manejo react por su popularidad, svelte por su rendimiento y comodidad de desarrollo  y astro para desarrollo de sitios estaticos",
+        "img":"frontend-frameworks.png",
+        "alt":"react, astro, svelte"
+    },
+    {
+        "title":"Backend",
+        "body":"El backend es el motor oculto de la web. Es la lógica que alimenta la funcionalidad y los datos detrás de cada acción en línea. Maneja la seguridad y la comunicación con las bases de datos, asegurando que las aplicaciones funcionen sin problemas. Para esto utilizo nodejs como entorno de desarrollo y express como framework, aunque ultimamente he estado probando el lenguaje go, el cual permite desarrollar backend con la misma libreria estandar.",
+        "img":"fraworksback.png",
+        "alt":"node, express, golang"
+    },
+    {
+        "title":"Herramientas",
+        "body":"Más allá de lenguajes de programación y frameworks están las herramientas que facilitan el proceso de desarrollo, el trabajo en equipo, el almacenamiento de datos o el testeo de funcionalidades. Para control de versiones utilizo git con github, testeo de Apis postman o thunderclient, base de datos sql postgre y no sql mongoDb emtre otras herramientas utiles.",
+        "img":"tools.png",
+        "alt":"Herramientas para desarrollo"
+    }
+]

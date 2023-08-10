@@ -6,29 +6,29 @@ type link = {
 
 let navbar:link[] = [
 	{
-		name: 'Home',
+		name: 'home',
 		url:'#'
 	},
     {
-        name:'About',
+        name:'tecnologias',
+        url:'#tecnologias'
+    },
+    {
+        name:'educación',
         url:'#'
     },
     {
-        name:'Services',
+        name:'trabajos',
         url:'#'
     },
     {
-        name:'Work',
-        url:'#'
-    },
-    {
-        name:'Contact',
+        name:'contacto',
         url:'#'
     }
 ]
 ---
-<nav class="fixed top-0 z-10 text-white flex w-full justify-between px-20 p-8 ">
-    <a id="logo" >logo</a>
+<nav class="fixed top-0 z-10 text-white flex w-full justify-between px-20 p-8 bg-black ">
+    <a href="#" id="logo" >logo</a>
     <ul class="flex gap-8 ">
         {
             navbar.map((nav)=>(
