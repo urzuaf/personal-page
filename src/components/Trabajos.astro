@@ -10,7 +10,7 @@ import trabajos from '../data/trabajos.json'
     {
         trabajos.map((trabajo)=>(
             <div class="text-black bg-white shadow-lg flex flex-col max-w-sm border rounded gap-4 p-2 ">    
-                <img class="w-full rounded " src={trabajo.img} alt={trabajo.nombre} />
+                <img loading="lazy" class="w-full rounded " src={trabajo.img} alt={trabajo.nombre} />
                 <h3 class="text-center font-semibold text-lg">{trabajo.nombre}</h3>
                 <p class="px-4 text-sm text-zinc-500">herramientas: {trabajo.tecnologias}</p>
                 <p class="px-4">{trabajo.descripción}</p>
