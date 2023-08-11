@@ -4,6 +4,7 @@ interface Props {
 }
 const { title } = Astro.props;
 import Navbar from "./Navbar.astro";
+import Footer from "./Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -28,6 +29,7 @@ import Navbar from "./Navbar.astro";
       <Navbar />
     </header>
     <slot />
+    <Footer />
   </body>
   <script>
     let width: number = window.innerWidth;
@@ -36,6 +38,15 @@ import Navbar from "./Navbar.astro";
     let mobilenav = document.getElementById("mobilenav");
     let logo = document.getElementById("logo");
     let mobileactive = true;
+    let mobilebtns = document.querySelectorAll(".mobilea")
+
+    for (let i = 0; i<mobilebtns.length; i++){
+      let btn = mobilebtns[i]
+      btn.addEventListener('click', ()=>{
+        console.log('here')
+        mobilebtn.click()
+      })
+    }
 
     let menu = document.createElement("span");
     let close = document.createElement("span");

@@ -1,3 +1,46 @@
-<section>
-    <h3>Fernando Urzúa</h3>
+---
+type link = {
+  name: string;
+  url: string;
+};
+
+let navbar: link[] = [
+  {
+    name: "home",
+    url: "#",
+  },
+  {
+    name: "tecnologias",
+    url: "#tecnologias",
+  },
+
+  {
+    name: "trabajos",
+    url: "#trabajos",
+  },
+  {
+    name: "contacto",
+    url: "#contacto",
+  },
+];
+---
+
+<section class="bg-black text-white p-20 flex flex-col md:flex-row gap-8 md:gap-20 justify-center md:items-center">
+  <div>
+    <h3 class="text-2xl md:text-4xl font-bold">Fernando Urzúa</h3>
+    <p class=" text-md md:text-xl font-medium">Desarrollador de experiencias web</p>
+  </div>
+  <div >
+    <ul id="normalnav" >
+      {
+        navbar.map((nav) => (
+          <li>
+            <a class="hover:underline text-md" href={nav.url}>
+              {nav.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>
