@@ -1,0 +1,44 @@
+---
+import newtab from '../data/custom-new-tab.json'
+import PortfolioLayout from '../components/portfolioLayout.astro';
+---
+<PortfolioLayout title='animedoro'>
+    <div class="py-20">
+        <section class="flex flex-col items-center gap-4" >
+            <a href={newtab.url} target="_blank">
+                <img loading="lazy" width="500px" height="400px" src={newtab.img} alt={newtab.title} />
+            </a>
+            <h1 class="text-2xl md:text-5xl font-semibold" >{newtab.title}</h1>
+            <h4 class="text-zinc-500">Herramientas : {newtab.Herramientas}</h4>
+            <div class="px-8 flex flex-col gap-8 py-8 ">
+                <h3 class="text-xl md:text-2xl font-medium text-center">Problema</h3> 
+                <p>{newtab.problem}</p>
+                <h3 class="text-xl md:text-2xl font-medium text-center">Desarrollo</h3> 
+                <p>{newtab.Desarrollo}</p>
+                <a class="btn  rounded p-4 text-center mb-4" href={newtab.url} target="_blank" >Ver en vivo</a>
+            </div>
+        </section>
+    </div>
+</PortfolioLayout>
+
+<style>
+    img{
+        width: 100vw;
+        padding-top:0 ;
+        opacity: 0.8;
+        margin-bottom: 4rem;
+    }
+    p{
+        max-width: 55ch;
+    }
+    .btn{
+		position: relative;
+		border: 2px solid #2aea7d;
+		padding: 16px 32px;
+		transition: .3s ease;
+	}
+	.btn:hover{
+		background: #2aea7d;
+		transition: .3s ease;
+	}
+</style>

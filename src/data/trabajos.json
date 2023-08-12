@@ -9,7 +9,7 @@
     },
     {
         "nombre": "Pagina de inicio",
-        "url":"https://notand105.github.io/custom-new-tab/",
+        "url":"/newtab",
         "descripción":"Mi navegador predeterminado es firefox, y si bien es muy comodo de usar, la pantalla de inicio no me resulta demasiado util, por lo que decidí implementar mi propia página de inicio con el fin de poder personalizarla y extenderla a mi gusto, sin embargo, como la pensé exclusivamente para escritorio aún no la he optimizado para moviles"
         ,
         "img":"newtab.png",
