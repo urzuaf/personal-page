@@ -1,6 +1,6 @@
 {
     "title":"Nueva pestaña personalizada",
-    "img":"newtab.png",
+    "img":"/newtab.png",
     "problem":"Actualmente mi sistema operativo es zorin os, una distribución de linux, la cual trae su propia página de inicio predeterminada para firefox, esta página de inicio resulta muy llamativa e interesante las primeras dos veces, sin embargo, despues resulta más molesta que útil. Podría simplemente volver a la predeterminada de firefox, pero decidí que podría implementar mi propia página ajustada a mis necesidades.",
     "Herramientas":"Astro, Svelte",
     "Desarrollo":"Decidí ubicar una barra superior con los 4 links más importantes en mi día a día, seguido por una barra lateral en la cual están todos los links que pueda, seguido de eso una barra de busqueda funcional, y la hora y fecha del día de forma más decorativa que funcional. Decidí utilizar astro en estre proyecto para familiarizarme más a fondo con el framework en conjunto con tailwind css, sin embargo, al ser una página que pensé solo para mi y para usarlo solamente en pc, esta pagina aún no se encuentra optimizada para moviles. ",
