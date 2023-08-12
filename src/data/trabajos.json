@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Animedoro timer",
-        "url":"https://notand105.github.io/animedoro/",
+        "url":"/animedoro",
         "descripción":"Basada en la famosa tecnica pomodoro, la cual consiste en estudiar 25 minutos para posteriormente descansar 5, la tecnica animedoro plantea que 25 minutos no es suficiente para concentrarse y que 5 minutos es muy poco descanso, por lo que en animedoro se estudia durante 40 minutos y se pausa durante 20, lo suficiente para ver un capitulo de anime"
         ,
         "img":"animedoro.png",

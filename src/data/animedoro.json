@@ -1,0 +1,8 @@
+{
+    "title":"Animedoro",
+    "img":"animedoro.png",
+    "problem":"Despues de escuchar sobre la tecnica de animedoro me propuse a utilizarla para estudiar para mis pruebas de la universidad, y me resultó bastante bien, por lo que decidí utilizarla como mi tecnica de estudio principal, sin embargo, preparar el cronometro en cada iteración me resultaba molesto por lo que decidí que podría implementar mi propio timer completamente personalizado con todas las configuraciones que me resulten utiles personalmente ",
+    "Herramientas":"Svelte",
+    "Desarrollo":"Para el fondo decidí usar gradientes en movimientos porque me transmiten un poco de calma y tranquilidad, algo realmente valorable al momento de estudiar. El Desarrollo de toda las funcionalidades está hecho en svelte siendo este mi primer proyecto desarrollado con este framework, utilizando stores junto con la api de localstorage para poder guardar los tiempos seleccionados y de esta manera poder llegar y utilizar el cronometro sin necesidad de configurarlo cada vez que lo utiliza",
+    "url":"https://notand105.github.io/animedoro/"
+}
