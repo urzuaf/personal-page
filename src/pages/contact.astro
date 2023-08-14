@@ -1,0 +1,49 @@
+---
+import PortfolioLayout from "../components/portfolioLayout.astro";
+const EMAIL = 'https://formsubmit.co/e14c7a3d088692c992427c4845980ed9'
+---
+
+<PortfolioLayout title='Contacto'>
+    <section class="py-20 w-full bg-emerald-100 flex justify-center">
+        <form action={EMAIL} method="POST" class="flex flex-col justify-center md:mt-20 gap-8 text-center items-center bg-white shadow-lg w-full md:w-1/2 py-10 rounded" >
+
+            <h3 class="md:text-2xl text-xl font-semibold">Enviame un mensaje</h3>
+            <div class="w-11/12 ">
+                <p class="text-left" >Nombre</p>
+                <input class="p-4 rounded w-full " type="text" name="name" placeholder="ingresa tu nombre" required />
+            </div>
+            <div class="w-11/12 ">
+                <p class="text-left" >Email</p>
+                <input class="p-4 rounded w-full" type="email" name="email" placeholder="ingresa tu correo electronico" required />
+            </div>
+            <div class="w-11/12 ">
+                <p class="text-left" >Mensaje</p>
+                <textarea class=" p-4 rounded w-full" name="message" placeholder="¿Cómo puedo ayudarte?" required/>
+            </div>
+            <button class="btn w-11/12" type="submit">Enviar mensaje</button>
+        </form>
+        
+    </section>
+</PortfolioLayout>
+<style>
+    input, textarea{
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline:none;
+        background-color: #f5f5f5;
+        font-size: 16px;
+
+    }
+    
+    .btn{
+		position: relative;
+		border: 2px solid #2aea7d;
+		padding: 16px 32px;
+		transition: .3s ease;
+	}
+	.btn:hover{
+		background: #2aea7d;
+		transition: .3s ease;
+	}
+</style>
