@@ -1,5 +1,6 @@
 ---
-import trabajos from '../data/trabajos.json'
+import trabajos from '../../public/trabajos.json'
+
 ---
 
 <section id="trabajos" class=" bg-emerald-600 text-black pb-40">
@@ -8,9 +9,10 @@ import trabajos from '../data/trabajos.json'
   </div>
   <div class="p-8 flex flex-col md:flex-row justify-center gap-8">
     {
-        trabajos.map((trabajo)=>(
+        trabajos.map((trabajo, index)=>(
             <div class="text-black bg-white shadow-lg flex flex-col max-w-sm border rounded gap-4 p-2 ">    
-                <img loading="lazy" class="w-full rounded " src={trabajo.img} alt={trabajo.nombre} />
+                    
+                <img loading="lazy" class="w-full rounded " src={trabajo.img} alt={trabajo.nombre}  width="360"/>
                 <h3 class="text-center font-semibold text-lg">{trabajo.nombre}</h3>
                 <p class="px-4 text-sm text-zinc-500">herramientas: {trabajo.tecnologias}</p>
                 <p class="px-4">{trabajo.descripción}</p>
