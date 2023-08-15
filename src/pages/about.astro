@@ -1,13 +1,13 @@
 ---
-import PortfolioLayout from "../components/portfolioLayout.astro";
+import Layout from "../components/Layout.astro";
 ---
 
-<PortfolioLayout title='Acerca de'>
-    <div class="py-20 mx-auto w-full">
-        <div class="flex justify-center">
-            <img width="400px" src="tools.png" alt="Imagen">
-            <h1>Hola otra vez, <br> soy Fernando</h1>
+<Layout title='Acerca de'>
+    <div class="py-40 mx-auto w-full h-screen p-20">
+        <div class="flex justify-center flex-col gap-4">
+            <h1 class="text-2xl md:text-5xl">Hola otra vez</h1>
+            <p class="text-lg">Actualmente está página se encuentra en construcción, vuelve a revisar en un par de días</p>
         </div>
         
     </div>
-</PortfolioLayout>
+</Layout>

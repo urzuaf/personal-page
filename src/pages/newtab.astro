@@ -1,11 +1,11 @@
 ---
 import newtab from '../data/custom-new-tab.json'
-import PortfolioLayout from '../components/portfolioLayout.astro';
+import Layout from '../components/Layout.astro';
 
 import newtab_img from  "../assets/newtab.png"
 import {Image} from 'astro:assets';
 ---
-<PortfolioLayout title='Custom Tab'>
+<Layout title='Custom Tab'>
     <div class="py-20">
         <section class="flex flex-col items-center gap-4" >
             <a href={newtab.url} target="_blank">
@@ -22,7 +22,7 @@ import {Image} from 'astro:assets';
             </div>
         </section>
     </div>
-</PortfolioLayout>
+</Layout>
 
 <style>
     img{

@@ -1,11 +1,11 @@
 ---
 import animedoro from '../data/animedoro.json'
-import PortfolioLayout from '../components/portfolioLayout.astro';
+import Layout from '../components/Layout.astro';
 
 import animedoro_img from  "../assets/animedoro.png"
 import {Image} from 'astro:assets';
 ---
-<PortfolioLayout title='animedoro'>
+<Layout title='animedoro'>
     <div class="py-20">
         <section class="flex flex-col items-center gap-4" >
             <a href={animedoro.url} target="_blank">
@@ -22,7 +22,7 @@ import {Image} from 'astro:assets';
             </div>
         </section>
     </div>
-</PortfolioLayout>
+</Layout>
 
 <style>
     img{

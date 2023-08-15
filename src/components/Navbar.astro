@@ -7,16 +7,16 @@ type link = {
 let navbar: link[] = [
   {
     name: "home",
-    url: "#",
+    url: "/",
   },
   {
     name: "tecnologias",
-    url: "#tecnologias",
+    url: "/tecnologias",
   },
   
   {
-    name: "trabajos",
-    url: "#trabajos",
+    name: "Acerca de",
+    url: "/about",
   },
   {
     name: "contacto",
@@ -26,9 +26,9 @@ let navbar: link[] = [
 ---
 
 <nav
-  class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 p-6 mr-8 text-white"
+  class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 p-6 mr-8 text-white bg-emerald-700 "
 >
-  <a href="#" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
+  <a href="/" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
   <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative">
     {
       navbar.map((nav) => (
