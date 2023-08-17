@@ -1,24 +1,143 @@
 ---
 import Layout from "../components/Layout.astro";
+import { Image } from "astro:assets";
+import about_img from "../assets/about.webp";
 ---
 
-<Layout title='Acerca de'>
-    <div class="py-40 mx-auto w-full h-screen p-20">
-        <div class="flex justify-center flex-col gap-4">
-            <h1 class="text-2xl md:text-5xl">Hola otra vez</h1>
-            <p class="text-lg">Actualmente está página se encuentra en construcción, vuelve a revisar en un par de días</p>
-            <ul>
-                <li>añadir edad</li>
-                <li>añadir nombre</li>
-                <li>mencionar utal</li>
-                <li>mencionar freecodecamp</li>
-                <li>mencionar youtube</li>
-                <li>mencionar leer documentación</li>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, optio.
-                </p>
-            </ul>
-            
+<Layout title="Acerca de">
+
+    <div class=" md:pt-20 pt-20 flex items-center justify-center gap-4 md:gap-20  text-emerald-700 w-screen flex-col md:flex-row-reverse  shadow-lg pb-20 shadow-emerald-100 ">
+        <Image
+        loading="eager"
+        quality={"mid"}
+        src={about_img}
+        alt="imagen en un parque"
+        width="450"
+        height="400"
+        class="shadow-xl mb-8 md:mb-10 md:mt-10 image "
+        />
+        <div class="md:py-8 text-center flex flex-col gap-4">
+            <h1 class="text-3xl md:text-5xl font-semibold  ">
+              ¡Hola otra vez!
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-semibold">
+                Mi nombre es Fernando 
+            </h2>
         </div>
-        
     </div>
+  <div class="pt-20 pb-40 mx-auto w-full p-8 md:p-20">
+    <div class="flex justify-center flex-col gap-4 items-center">
+      <div class="pb-10 flex flex-col gap-4">
+        <h3 class="text-xl md:text-3xl font-medium">Sobre mí</h3>
+        <p>
+          Mi nombre es Fernando Urzúa, un apasionado desarrollador y diseñador
+          web con un ojo meticuloso para el detalle y un amor por la creación de
+          experiencias digitales sorprendentes. Mi misión es otorgar visibilidad
+          online a pequeños y medianos negocios.
+        </p>
+      </div>
+      <div class="pb-10 flex flex-col gap-4">
+        <h3 class="text-xl md:text-3xl font-medium">Lo que hago</h3>
+        <p>
+          Mi enfoque combina una sólida experiencia en desarrollo y diseño.
+          Trabajo con un amplio espectro de tecnologías, desde la creación de
+          sitios web dinámicos y receptivos hasta el diseño de interfaces
+          centradas en el usuario. Me apasiona la colaboración y trabajar de
+          cerca con mis clientes para entender sus objetivos y crear soluciones
+          que superen sus expectativas.
+        </p>
+      </div>
+      <div class="pb-10 flex flex-col gap-4">
+        <h3 class="text-xl md:text-3xl font-medium">Mi historia</h3>
+        <p>
+          Desde una temprana edad, siempre estuve fascinado por la tecnología y
+          el diseño, Aunque mi primer acercamiento a la programación fue cuando
+          comencé la carrera de ingenieria civil en computación en la
+          universidad de Talca. Precisamente en la universidad fue donde
+          descubrí que una de mis ramas favoritas de la computación es el
+          desarrollo web, esto me motivó a no solo conformarme con los
+          conocimientos otorgados por la institución, por lo que comencé a
+          aprender más a fondo utilizando otros recursos online como <a
+            href="https://www.freecodecamp.org/"
+            target="_blank">freecodecamp</a
+          >, youtube y leyendo mucha documentación.
+          <br />
+          <br />
+          Como ya tenía bases en HTML, CSS y JS mi siguiente paso fue enfocarme en
+          aprender un framework de desarrollo frontend, comencé con react debido
+          a que gracias a su popularidad se puede encontrar facilmente documentación
+          y librerias de la comunidad.
+          <br />
+          <br />
+          Una vez que conseguí un nivel medio en react comencé a aprender un poco
+          de backend, más que nada en la manipulación de bases de datos mediante
+          la creación de REST APIs, con el fin de poder vincular mis aplicaciones
+          frontend a bases de datos y poder desarrollar sistemas completamente interactivos
+          con persistencia de datos, para la creación de estos backends utilicé nodejs
+          junto con express debido a que de manera similar a react, esta combinación
+          cuenta con gran documentación online.
+          <br />
+          <br />
+          He experimentado con distintas tecnologías y frameworks para poder elegir
+          los recursos acordes al problema que enfrento, lo que me permite diferenciar
+          cuando usar generadores de sitios estaticos como astro, cuando usar frameworks
+          como react o svelte por si solos y cuando usar metaframeworks como sveltekit
+          o nextjs.
+          <br />
+          <br />
+          Ultimamente ya sabiendo como crear aplicaciones full stack he estado reforzando
+          mis habilidades de diseño UX/UI para poder implementar páginas comodas
+          de usar y atractivas visualmente, para esto he usado herramientas como
+          Figma o Penpot para diseño de interfaces, creacion de mockups y creación
+          de wireframes.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h3 class="text-xl md:text-3xl font-medium">¿Listo para colaborar?</h3>
+        <p>
+          Si tienes una idea emocionante o un proyecto desafiante, ¡estoy listo
+          para sumergirme en ello! Estoy deseando conocer más sobre tu visión y
+          trabajar juntos para convertirla en realidad. No dudes en ponerte en
+          contacto conmigo. ¡Gracias por visitar mi sitio web y espero tener la
+          oportunidad de trabajar contigo!
+        </p>
+        <a
+          href="/contact"
+          class="rounded btn md:text-2xl mt-4 w-full text-center md:w-fit"
+          >Contactame</a
+        >
+      </div>
+    </div>
+  </div>
 </Layout>
+<style>
+  p {
+    max-width: 60ch;
+    opacity: 0.9;
+  }
+  .btn {
+    position: relative;
+    padding: 16px 36px;
+    transition: 0.3s ease;
+    background: #684c44;
+    color: white;
+  }
+  .btn:hover {
+    background: #533d37;
+    transition: 0.3s ease;
+  }
+  .image{
+    border-radius: 50%;
+    max-width: 50%;
+    margin-right: 1rem;
+    margint-top:2.5rem;
+  }
+  @media (max-width:450px) {
+    .image{
+        margin-right: 0;
+        margin-top: -0.25rem;
+        border-radius: 0px;
+        max-width:100% ;
+    }
+  }
+</style>
