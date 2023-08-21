@@ -15,7 +15,7 @@
         "img":"/fraworksback.png",
         "alt":"node, express, golang",
         "title2":"Herramientas",
-        "body2":"Más allá de lenguajes de programación y frameworks están las herramientas que facilitan el proceso de desarrollo, el trabajo en equipo, el almacenamiento de datos o el testeo de funcionalidades. Para control de versiones utilizo git con github, testeo de Apis postman o thunderclient, base de datos sql postgre y no sql mongoDb entre otras herramientas utiles.",
+        "body2":"Más allá de lenguajes de programación y frameworks están las herramientas que facilitan el proceso de desarrollo, el trabajo en equipo, el almacenamiento de datos o el testeo de funcionalidades. Para control de versiones utilizo git con github, testeo de Apis postman o thunderclient, base de datos sql postgreSQL y base de datos no sql MongoDB entre otras herramientas utiles.",
         "img2":"/tools.png",
         "alt2":"Herramientas para desarrollo"
     }
