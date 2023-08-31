@@ -18,27 +18,26 @@ let navbar: link[] = [
     name: "Acerca de",
     url: "/about",
   },
-  {
-    name: "contacto",
-    url: "/contact",
-  },
+ 
 ];
 ---
 
 <nav
-  class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 p-6 mr-8 text-white bg-emerald-700 "
+  class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 py-4 mr-8 text-white bg-emerald-700  "
 >
   <a href="/" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
-  <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative">
+  <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative py-2">
     {
       navbar.map((nav) => (
-        <li>
-          <a class="hover:underline text-md" href={nav.url}>
+        <li >
+          <a class="hover:underline text-md py-2" href={nav.url}>
             {nav.name}
           </a>
         </li>
       ))
     }
+    <a class="text-md text-white py-2 px-3  rounded -translate-y-2 transition-all ctcbtn" href='/contact'>
+           contacto</a>
   </ul>
   <button id="mobilebtn" class="btn z-10"
     ><span class="material-symbols-outlined"> menu</span></button
@@ -56,6 +55,8 @@ let navbar: link[] = [
         </li>
       ))
     }
+    <a class="hover:underline text-lg mobilea" href='/contact'>
+            contacto</a>
   </ul>
 </nav>
 
@@ -78,5 +79,11 @@ let navbar: link[] = [
 }
   #mobilenav{
     transition: .4s ease;
+  }
+  .ctcbtn{
+		background: #684c44;
+  }
+  .ctcbtn:hover{
+		background: #533d37;
   }
 </style>
