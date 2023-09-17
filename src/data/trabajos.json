@@ -1,5 +1,14 @@
 [
     {
+        "nombre": "Cocktails",
+        "url":"/cocktails",
+        "descripción":"Una de las partes esenciales del desarrollo frontend es el renderizar interfaces utilizando información obtenida de una REST API, en este caso, utilizando la api de 'TheCocktailsDB', desarrollé una simple interfaz gráfica en la que se puedan obtener diversos cocktails ya sea al azar o filtrando por un elemento especifico."
+        ,
+        "img":"/cocktails.png",
+        "tecnologias":"astro, svelte"
+    
+    },
+    {
         "nombre": "Animedoro timer",
         "url":"/animedoro",
         "descripción":"Basada en la famosa tecnica pomodoro, la cual consiste en estudiar 25 minutos para posteriormente descansar 5, la tecnica animedoro plantea que 25 minutos no es suficiente para concentrarse y que 5 minutos es muy poco descanso, por lo que en animedoro se estudia durante 40 minutos y se pausa durante 20, lo suficiente para ver un capitulo de anime"
@@ -15,5 +24,6 @@
         "img":"/newtab.png",
         "tecnologias":"astro, svelte"
     }
+    
 
 ]
