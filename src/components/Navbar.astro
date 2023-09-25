@@ -23,7 +23,7 @@ let navbar: link[] = [
 ---
 
 <nav
-  class="fixed top-0 z-50 flex w-full justify-between px-8 md:px-20 pt-4  text-white bg-emerald-700 md:pb-0 pb-4 "
+  class="w-screen fixed top-0 z-50 flex justify-between px-8 md:px-20 pt-4  text-white bg-emerald-700 md:pb-0 pb-4 "
 >
   <a href="/" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
   <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative py-2">
@@ -45,7 +45,7 @@ let navbar: link[] = [
   >
   <ul
     id="mobilenav"
-    class="absolute flex text-black bg-white flex-col top-0 left-full justify-center items-center w-screen h-screen gap-8"
+    class="md:hidden absolute flex text-black bg-white flex-col top-0 left-full justify-center items-center w-screen h-screen gap-8"
   >
     {
       navbar.map((nav) => (

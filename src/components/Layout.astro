@@ -29,7 +29,7 @@ import Footer from "./Footer.astro";
     <meta name="author" content="Fernando Urzua">
     <title>Fernando Urzúa {"| " + title}</title>
   </head>
-  <body class="scroll-smooth">
+  <body class="scroll-smooth overflowX-hidden">
     <header class="relative">
       <Navbar />
     </header>
@@ -60,13 +60,13 @@ import Footer from "./Footer.astro";
     // menu.innerText = "menu";
     // close.innerText = "close";
     displayNavbar(width);
-
     window.addEventListener("resize", () => {
       width = window.innerWidth;
       displayNavbar(width);
     });
 
     window.addEventListener("scroll", () => {
+      
       const nav = document.querySelector("nav");
       nav.classList.toggle("text-black", window.scrollY > 0);
       nav.classList.toggle("bg-white", window.scrollY > 0);
