@@ -2,7 +2,7 @@
 import techs from "../data/technologies.json";
 ---
 
-<section id="tecnologias" class=" text-black pb-40 deco z-40 opacity-100">
+<section id="tecnologias" class=" text-black pb-40 deco z-40 opacity-100 overflow-x-hidden">
   <div class="">
     <div class="px-20 pt-10 m-auto">
       <h2 class="text-3xl font-semibold text-center">Tecnologias</h2>
@@ -92,14 +92,14 @@ import techs from "../data/technologies.json";
   }
   .hidden1 {
     opacity: 0;
-    transition: all 1s;
-    filter: blur(4px);
+    transition: all .6s;
+    filter: blur(2px);
     transform: translateX(-100%);
   }
   .hidden2 {
     opacity: 0;
-    transition: ease all 1s;
-    filter: blur(4px);
+    transition: ease all .6s;
+    filter: blur(2px);
     transform: translateX(100%);
   }
 
