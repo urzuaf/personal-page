@@ -53,12 +53,12 @@ import Footer from "./Footer.astro";
       })
     }
 
-    let menu = document.createElement("span");
-    let close = document.createElement("span");
-    menu.classList.add("material-symbols-outlined");
-    close.classList.add("material-symbols-outlined");
-    menu.innerText = "menu";
-    close.innerText = "close";
+    //let menu = document.createElement("span");
+    //let close = document.createElement("span");
+    //menu.classList.add("menubtn");
+    //close.classList.add("closebtn");
+    // menu.innerText = "menu";
+    // close.innerText = "close";
     displayNavbar(width);
 
     window.addEventListener("resize", () => {
@@ -70,12 +70,25 @@ import Footer from "./Footer.astro";
       const nav = document.querySelector("nav");
       nav.classList.toggle("text-black", window.scrollY > 0);
       nav.classList.toggle("bg-white", window.scrollY > 0);
-      if (window.scrollY > 0) {
-        mobilebtn.style.color = "black";
+      if (window.scrollY > 0 && mobileactive) {
+        mobilebtn.classList.remove('menubtn')
+        mobilebtn.classList.add('menudarkbtn')
+        // mobilebtn.style.color = "black";
         normalnav.style.color = "black";
         logo.style.color = "black"
-      } else {
-        mobilebtn.style.color = "white";
+      }
+      else if (window.scrollY == 0 && mobileactive ){
+        mobilebtn.classList.remove('closebtn')
+        mobilebtn.classList.remove('menudarkbtn')
+        mobilebtn.classList.add('menubtn')
+        normalnav.style.color = "white";
+        logo.style.color = "white"
+      } 
+      else {
+        // mobilebtn.classList.remove('menudarkbtn')
+        // mobilebtn.classList.remove('menubtn')
+        // mobilebtn.classList.add('closebtn')
+        // mobilebtn.style.color = "white";
         normalnav.style.color = "white";
         logo.style.color = "white"
       }
@@ -84,14 +97,24 @@ import Footer from "./Footer.astro";
     mobilebtn.addEventListener("click", () => {
       if (mobileactive) {
         mobilenav.style.left = "0";
-        mobilebtn.replaceChildren(close);
-        mobilebtn.style.color = "black";
+        mobilebtn.classList.add('closebtn')
+        mobilebtn.classList.remove('menubtn')
+        mobilebtn.classList.remove('menudarkbtn')
+        // mobilebtn.replaceChildren(close);
+        // mobilebtn.style.color = "black";
       } else {
         mobilenav.style.left = "100%";
-        mobilebtn.replaceChildren(menu);
-        window.scrollY > 0
-          ? (mobilebtn.style.color = "black")
-          : (mobilebtn.style.color = "white");
+        if(window.scrollY>0){
+          mobilebtn.classList.add('menudarkbtn')
+        }
+        else{
+          mobilebtn.classList.add('menubtn')
+        }
+        mobilebtn.classList.remove('closebtn')
+        // mobilebtn.replaceChildren(menu);
+        // window.scrollY > 0
+        //   ? (mobilebtn.style.color = "black")
+        //   : (mobilebtn.style.color = "white");
       }
       mobileactive = !mobileactive;
     });

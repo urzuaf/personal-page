@@ -3,20 +3,21 @@ import trabajos from '../data/trabajos.json'
 
 ---
 
-<section id="trabajos" class=" bg-emerald-600 text-black pb-40">
+<section id="trabajos" class="  text-black pb-40 w-full">
   <div class="p-20 m-auto">
-        <h2 class="text-3xl font-semibold text-center text-white">Trabajos</h2>
+        <h2 class="text-3xl font-semibold text-center pt-10">Trabajos</h2>
   </div>
-  <div class="p-8 flex flex-col md:flex-row justify-center gap-8 items-center">
+  <div class="p-8 flex flex-col justify-center gap-8 items-center flex-wrap mx-auto">
     {
         trabajos.map((trabajo, index)=>(
-            <div class="text-black bg-white shadow-lg flex flex-col max-w-sm border rounded gap-4 p-2 ">    
-                    
-                <img loading="lazy" class="w-full rounded " src={trabajo.img} alt={trabajo.nombre}  width="360"/>
-                <h3 class="text-center font-semibold text-lg">{trabajo.nombre}</h3>
-                <p class="px-4 text-sm text-zinc-500">herramientas: {trabajo.tecnologias}</p>
-                <p class="px-4">{trabajo.descripción}</p>
-                <a class="btn  rounded p-4 text-center mb-4" href={trabajo.url}  >Saber más</a>
+            <div class="text-black bg-white shadow-lg flex flex-col-reverse md:flex-row border rounded gap-4 p-2 ">    
+                <div class="flex-col flex gap-2">
+                    <h3 class="text-center font-semibold text-lg md:text-xl">{trabajo.nombre}</h3>
+                    <p class="px-4 text-sm text-zinc-500 text-center">herramientas: {trabajo.tecnologias}</p>
+                    <p class="px-4">{trabajo.descripción}</p>
+                    <a class="btn rounded p-4 text-center mb-4 w-4/5 mx-auto mt-2" href={trabajo.url}  >Saber más</a>
+                </div>
+                <img loading="lazy" class="w-full max-w-md rounded mx-auto aspect-auto" src={trabajo.img} alt={trabajo.nombre}  width="360"/>
             </div>
         ))
     }
@@ -35,5 +36,8 @@ import trabajos from '../data/trabajos.json'
         color: white;
 		transition: .3s ease;
 	}
+    p{
+        max-width: 50ch;
+    }
     
 </style>

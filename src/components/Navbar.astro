@@ -10,8 +10,8 @@ let navbar: link[] = [
     url: "/",
   },
   {
-    name: "tecnologias",
-    url: "/tecnologias",
+    name: "trabajos",
+    url: "/portfolio",
   },
   
   {
@@ -23,7 +23,7 @@ let navbar: link[] = [
 ---
 
 <nav
-  class="fixed top-0 z-10 flex w-full justify-between px-8 md:px-20 py-4 mr-8 text-white bg-emerald-700  "
+  class="fixed top-0 z-50 flex w-full justify-between px-8 md:px-20 pt-4  text-white bg-emerald-700 md:pb-0 pb-4 "
 >
   <a href="/" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
   <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative py-2">
@@ -39,8 +39,9 @@ let navbar: link[] = [
     <a class="text-md text-white py-2 px-3  rounded -translate-y-2 transition-all ctcbtn" href='/contact'>
            contacto</a>
   </ul>
-  <button id="mobilebtn" class="btn z-10"
-    ><span class="material-symbols-outlined"> menu</span></button
+  <button id="mobilebtn" class="btn z-10 menubtn text-white">
+  </button
+
   >
   <ul
     id="mobilenav"
@@ -61,6 +62,7 @@ let navbar: link[] = [
 </nav>
 
 <style>
+ 
   nav {
     transition: 0.5s ease;
   }
@@ -77,6 +79,15 @@ let navbar: link[] = [
   'GRAD' 0,
   'opsz' 48
 }
+  .closebtn{
+    background-image: url('/close.svg');
+  }
+  .menubtn{
+    background-image: url('/menu.svg');
+  }
+  .menudarkbtn{
+    background-image: url('/menudark.svg');
+  }
   #mobilenav{
     transition: .4s ease;
   }
