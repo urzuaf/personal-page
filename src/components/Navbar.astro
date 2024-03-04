@@ -13,37 +13,37 @@ let navbar: link[] = [
     name: "trabajos",
     url: "/portfolio",
   },
-  
+
   {
     name: "Acerca de",
     url: "/about",
   },
- 
 ];
 ---
 
 <nav
-  class="w-screen fixed top-0 z-50 flex justify-between px-8 md:px-20 pt-4  text-white bg-emerald-700 md:pb-0 pb-4 "
+  class="w-screen fixed top-0 z-50 flex justify-between px-8 md:px-8 pt-4 text-white bg-emerald-700 md:pb-0 pb-4"
 >
   <a href="/" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
-  <ul id="normalnav" class="hidden md:gap-8 md:flex-row md:relative py-2">
-    {
-      navbar.map((nav) => (
-        <li >
-          <a class="hover:underline text-md py-2" href={nav.url}>
-            {nav.name}
-          </a>
-        </li>
-      ))
-    }
-    <a class="text-md text-white py-2 px-3  rounded -translate-y-2 transition-all ctcbtn" href='/contact'>
-           contacto</a>
-  </ul>
-  <button id="mobilebtn" class="btn z-10 menubtn text-white">
-  </button
-
-  >
-  <ul
+    <ul id="normalnav" class="hidden md:gap-8 md:relative py-2 text-sm lg:text-base ">
+      {
+        navbar.map((nav) => (
+          <li>
+            <a class="hover:underline text-md py-2" href={nav.url}>
+              {nav.name}
+            </a>
+          </li>
+        ))
+      }
+      <a
+        class="text-md text-white py-2 px-3 rounded -translate-y-2 transition-all ctcbtn"
+        href="/contact"
+      >
+        contacto</a
+      >
+    </ul>
+    <button id="mobilebtn" class="btn z-10 menubtn text-white"> </button>
+    <ul
     id="mobilenav"
     class="md:hidden absolute flex text-black bg-white flex-col top-0 left-full justify-center items-center w-screen h-screen gap-8"
   >
@@ -52,17 +52,15 @@ let navbar: link[] = [
         <li>
           <a class="hover:underline text-lg mobilea" href={nav.url}>
             {nav.name}
-          </a>
-        </li>
-      ))
-    }
-    <a class="hover:underline text-lg mobilea" href='/contact'>
-            contacto</a>
+            </a>
+            </li>
+            ))
+          }
+    <a class="hover:underline text-lg mobilea" href="/contact"> contacto</a>
   </ul>
 </nav>
 
 <style>
- 
   nav {
     transition: 0.5s ease;
   }
@@ -72,29 +70,25 @@ let navbar: link[] = [
   .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   }
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-  .closebtn{
-    background-image: url('/close.svg');
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   }
-  .menubtn{
-    background-image: url('/menu.svg');
+  .closebtn {
+    background-image: url("/close.svg");
   }
-  .menudarkbtn{
-    background-image: url('/menudark.svg');
+  .menubtn {
+    background-image: url("/menu.svg");
   }
-  #mobilenav{
-    transition: .4s ease;
+  .menudarkbtn {
+    background-image: url("/menudark.svg");
   }
-  .ctcbtn{
-		background: #684c44;
+  #mobilenav {
+    transition: 0.4s ease;
   }
-  .ctcbtn:hover{
-		background: #533d37;
+  .ctcbtn {
+    background: #684c44;
+  }
+  .ctcbtn:hover {
+    background: #533d37;
   }
 </style>

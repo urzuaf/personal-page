@@ -1,10 +1,19 @@
 [
     {
+        "nombre": "Dark souls Tracker",
+        "url":"/dstracker",
+        "descripción":"Obtener todos los logros del juego Dark souls fue una experiencia gratificante, sin embargo, tenia el problema de saber que cosas ya había conseguido y cuales aún tenia pendientes, para esto desarrollé 'Dark souls tracker' que me permite llevar un registro de todo lo que he conseguido a lo largo de mi partida"
+        ,
+        "img":"/ds_tracker.webp",
+        "tecnologias":"astro, svelte"
+    
+    },
+    {
         "nombre": "Cocktails",
         "url":"/cocktails",
         "descripción":"Una de las partes esenciales del desarrollo frontend es el renderizar interfaces utilizando información obtenida de una REST API, en este caso, utilizando la api de 'TheCocktailsDB', desarrollé una simple interfaz gráfica en la que se puedan obtener diversos cocktails ya sea al azar o filtrando por un elemento especifico."
         ,
-        "img":"/cocktails.png",
+        "img":"/cocktails.webp",
         "tecnologias":"astro, svelte"
     
     },
@@ -13,17 +22,8 @@
         "url":"/animedoro",
         "descripción":"Basada en la famosa tecnica pomodoro, la cual consiste en estudiar 25 minutos para posteriormente descansar 5, la tecnica animedoro plantea que 25 minutos no es suficiente para concentrarse y que 5 minutos es muy poco descanso, por lo que en animedoro se estudia durante 40 minutos y se pausa durante 20, lo suficiente para ver un capitulo de anime"
         ,
-        "img":"/animedoro.png",
+        "img":"/animedoro.webp",
         "tecnologias":"svelte"
-    },
-    {
-        "nombre": "Pagina de inicio",
-        "url":"/newtab",
-        "descripción":"Mi navegador predeterminado es firefox, y si bien es muy comodo de usar, la pantalla de inicio no me resulta demasiado util, por lo que decidí implementar mi propia página de inicio con el fin de poder personalizarla y extenderla a mi gusto, sin embargo, como la pensé exclusivamente para escritorio aún no la he optimizado para moviles"
-        ,
-        "img":"/newtab.png",
-        "tecnologias":"astro, svelte"
     }
-    
 
 ]

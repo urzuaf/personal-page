@@ -10,14 +10,14 @@ import trabajos from '../data/trabajos.json'
   <div class="p-8 flex flex-col justify-center gap-8 items-center flex-wrap mx-auto">
     {
         trabajos.map((trabajo, index)=>(
-            <div class="text-black bg-white shadow-lg flex flex-col-reverse md:flex-row border rounded gap-4 p-2 ">    
+            <div class="text-black bg-emerald-50 shadow-lg flex flex-col-reverse  md:flex-row border rounded gap-4 p-2 ">    
                 <div class="flex-col flex gap-2">
                     <h3 class="text-center font-semibold text-lg md:text-xl">{trabajo.nombre}</h3>
                     <p class="px-4 text-sm text-zinc-500 text-center">herramientas: {trabajo.tecnologias}</p>
                     <p class="px-4">{trabajo.descripción}</p>
                     <a class="btn rounded p-4 text-center mb-4 w-4/5 mx-auto mt-2" href={trabajo.url}  >Saber más</a>
                 </div>
-                <img loading="lazy" class="w-full max-w-md rounded mx-auto aspect-auto" src={trabajo.img} alt={trabajo.nombre}  width="360"/>
+                <img loading="lazy" class="  w-full lg:w-full max-w-md rounded mx-auto sm:w-1 sm:invisible lg:visible " src={trabajo.img} alt={trabajo.nombre}  width="360"/>
             </div>
         ))
     }
