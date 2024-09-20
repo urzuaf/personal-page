@@ -13,16 +13,16 @@ import { Image } from "astro:assets";
 		id="home"
 		class="banner bg-emerald-700 relative flex flex-col md:flex-row items-center justify-center text-white w-full gap-4 md:gap-8 overflow-hidden md:p-20 p-8"
 	>
-		<div class="textBox flex flex-col gap-4 mt-10 z-10">
-			<h1 class="text-2xl md:text-5xl font-semibold">
+		<div class=" flex flex-col gap-4 mt-10 z-10">
+			<h1 class="text-4xl md:text-5xl font-semibold">
 				Hola, soy <br />
-				<span class="text-3xl md:text-6xl font-bold"
+				<span class=" text-5xl md:text-6xl font-bold"
 					>Fernando Urzúa</span
 				>
 			</h1>
 			<h2 class="text-base md:text-xl font-medium ">
-				Desarrollador y diseñador de aplicaciones web, enfocado en
-				elevar la visibilidad online de pequeñas y medianas empresas
+				Desarrollador y diseñador de aplicaciones web responsivas e impresionantes.
+
 			</h2>
 			<a
 				href="/contact"
@@ -30,14 +30,13 @@ import { Image } from "astro:assets";
 				>Contactame</a
 			>
 		</div>
-		<Image
+		<!-- <Image
 			loading="eager"
 			quality={"mid"}
 			src={landing_img}
 			alt="imagen sentado con una laptop"
 			class="z-10 lg:w-96 lg:visible w-1 invisible m-2 rounded-full shadow-emerald-900 md:shadow-2xl"
-		/>
-
+		/> -->
 		<div class="custom-shape-divider-bottom-1709559981">
 			<svg
 				data-name="Layer 1"
@@ -67,7 +66,7 @@ import { Image } from "astro:assets";
 
 <style>
 	.banner {
-		min-height: 80vh;
+		min-height: 90vh;
 	}
 	.banner::before {
 		background-color: #047857;

@@ -1,0 +1,7 @@
+{
+    "title":"DBD",
+    "problem":"He sido ayudante del curso de diseño de bases de datos de mi universidad por más de un año, debido a esto decidí desarrollar esta pequeña aplicación como ayuda, en la que pueda ver cada enunciado de las tareas junto con su solución, además de que los estudiantes del modulo puedan acceder a ver sus notas simplemente con su correo electronico.",
+    "Herramientas":"Astro",
+    "Desarrollo":"El desarrollo de esta aplicación fue bastante sencillo, en su mayoria se comporta como un blog de contenido estático, por lo que los enunciados y soluciones son escritos en markdown, y estos posteriormente son mostrados como HTML en la página.",
+    "url":"https://urzuaf.github.io/dbd/"
+}

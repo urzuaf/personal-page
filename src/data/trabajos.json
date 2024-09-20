@@ -1,5 +1,12 @@
 [
     {
+        "nombre": "DBD",
+        "url":"/dbd",
+        "descripción":"Sistema de ayuda para revisiones de laboratorios y tareas del curso de diseño de bases de datos de mi universidad.",
+        "img":"/dbd.webp",
+        "tecnologias": "astro"
+    },
+    {
         "nombre": "Dark souls Tracker",
         "url":"/dstracker",
         "descripción":"Obtener todos los logros del juego Dark souls fue una experiencia gratificante, sin embargo, tenia el problema de saber que cosas ya había conseguido y cuales aún tenia pendientes, para esto desarrollé 'Dark souls tracker' que me permite llevar un registro de todo lo que he conseguido a lo largo de mi partida"
