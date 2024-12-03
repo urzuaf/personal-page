@@ -2,8 +2,8 @@
 import trabajos from "../data/trabajos.json";
 ---
 
-<section id="trabajos" class="pb-40 w-full relative">
-  <div class="p-20 m-auto sticky top-0 ">
+<section id="trabajos" class="pb-40 w-full ">
+  <div class="p-20 m-auto ">
     <h2 class="text-3xl md:text-5xl font-semibold text-center pt-10 text-white">
       Proyectos
     </h2>
@@ -13,11 +13,9 @@ import trabajos from "../data/trabajos.json";
   >
     {
       trabajos.map((trabajo, index) => {
-        const total = 224 +  index * 20 
         return (
           <div
-            class={`max-w-lg border border-gray-800 bg-[#1A2029] sticky`}
-            style={{ top: `${total}px` }}
+            class={`max-w-lg border border-gray-800 bg-[#1A2029] `}
           >
             <a href={trabajo.url}>
               <img
