@@ -1,6 +1,6 @@
 ---
 import Layout from "../components/Layout.astro";
-import Contacto from "../components/Contacto.astro";
+import Contacto from "../components/Contacto2.astro";
 import Servicios from "../components/Servicios.astro";
 import Tecnologias from "../components/Tecnologias.astro";
 
@@ -11,22 +11,24 @@ import { Image } from "astro:assets";
 <Layout title="Homepage">
 	<section
 		id="home"
-		class="banner bg-emerald-700 relative flex flex-col md:flex-row items-center justify-center text-white w-full gap-4 md:gap-8 overflow-hidden md:p-20 p-8"
+		class="banner relative flex flex-col md:flex-row items-center justify-center text-white w-full gap-4 md:gap-8 overflow-hidden md:p-20 p-8 bg-horizonAnimated bg-cover bg-scroll bg-center bg-no-repeat"
 	>
 		<div class=" flex flex-col gap-4 mt-10 z-10">
 			<h1 class="text-4xl md:text-5xl font-semibold">
 				Hola, soy <br />
-				<span class=" text-5xl md:text-6xl font-bold"
+				<span class=" text-5xl lg:text-7xl font-bold"
 					>Fernando Urzúa</span
 				>
 			</h1>
-			<h2 class="text-base md:text-xl font-medium ">
-				Desarrollador y diseñador de aplicaciones web responsivas e impresionantes.
-
+			<h2 class=" md:text-3xl text-2xl font-medium text-[#2563EB]">
+				Desarrollador Fullstack
 			</h2>
+			<p class="text-base md:text-xl font-medium ">
+				Desarrollador diseñador de aplicaciones web responsivas e impresionantes.
+			</p>
 			<a
 				href="/contact"
-				class="rounded btn md:text-2xl mt-4 w-full text-center md:w-fit"
+				class="rounded btn md:text-2xl mt-4 w-full text-center sm:w-fit"
 				>Contactame</a
 			>
 		</div>
@@ -37,26 +39,7 @@ import { Image } from "astro:assets";
 			alt="imagen sentado con una laptop"
 			class="z-10 lg:w-96 lg:visible w-1 invisible m-2 rounded-full shadow-emerald-900 md:shadow-2xl"
 		/> -->
-		<div class="custom-shape-divider-bottom-1709559981">
-			<svg
-				data-name="Layer 1"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 1200 120"
-				preserveAspectRatio="none"
-			>
-				<path
-					d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-					opacity=".25"
-					class="shape-fill"></path>
-				<path
-					d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-					opacity=".5"
-					class="shape-fill"></path>
-				<path
-					d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-					class="shape-fill"></path>
-			</svg>
-		</div>
+		
 	</section>
 
 	<Servicios />
@@ -69,9 +52,7 @@ import { Image } from "astro:assets";
 		min-height: 90vh;
 	}
 	.banner::before {
-		background-color: #047857;
 		content: "";
-		background-image: url("data:image/svg+xml,%3csvg width='12' height='24' viewbox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%2307976e' fill-opacity='0.4'%3e%3cpath d='m2 0h2v12h2v0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12h8v12z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
 		position: absolute;
 		top: 0;
 		width: 100%;
@@ -81,42 +62,31 @@ import { Image } from "astro:assets";
 		max-width: 50ch;
 	}
 
+	.bigfs{
+		font-size: 14rem;
+	}
 	.btn {
 		position: relative;
 		padding: 16px 36px;
 		transition: 0.3s ease;
-		background: #684c44;
+		background: #2563EB;
+		color: white;
+		border-radius: 20px;
 	}
 	.btn:hover {
-		background: #533d37;
+		background: #2563EB;
 		transition: 0.3s ease;
 	}
-	.custom-shape-divider-bottom-1709559981 {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		overflow: hidden;
-		line-height: 0;
-		transform: rotate(180deg);
-	}
+	
+	#home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* Altura del blur */
+  background: linear-gradient(to bottom, rgba(14, 20, 27, 0.473) 0%, rgba(14, 20, 27, 1) 100%);
+  pointer-events: none; /* Asegura que no interfiera con el contenido */
+}
 
-	.custom-shape-divider-bottom-1709559981 svg {
-		position: relative;
-		display: block;
-		width: calc(116% + 1.3px);
-		height: 73px;
-	}
-
-	.custom-shape-divider-bottom-1709559981 .shape-fill {
-		fill: #ffffff;
-	}
-
-	/** For mobile devices **/
-	@media (max-width: 767px) {
-		.custom-shape-divider-bottom-1709559981 svg {
-			width: calc(168% + 1.3px);
-			height: 73px;
-		}
-	}
 </style>

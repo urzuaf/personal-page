@@ -6,89 +6,82 @@ type link = {
 
 let navbar: link[] = [
   {
-    name: "home",
-    url: "/",
-  },
-  {
-    name: "trabajos",
+    name: "Proyectos",
     url: "/portfolio",
   },
 
   {
-    name: "Acerca de",
+    name: "AcercaDe",
     url: "/about",
   },
 ];
 ---
 
 <nav
-  class="w-screen fixed top-0 z-50 flex justify-between px-8 md:px-8 pt-4 text-white bg-emerald-700 md:pb-0 pb-4"
+  class="navbar w-screen fixed top-0 z-50 flex justify-between px-8 lg:px-40 bg-[#0E141B] py-4 md:py-6"
 >
-  <a href="/" class="font-bold text-lg md:text-2xl" id="logo">Fernando</a>
-    <ul id="normalnav" class="hidden md:gap-8 md:relative py-2 text-sm lg:text-base ">
-      {
-        navbar.map((nav) => (
-          <li>
-            <a class="hover:underline text-md py-2" href={nav.url}>
-              {nav.name}
-            </a>
-          </li>
-        ))
-      }
-      <a
-        class="text-md text-white py-2 px-3 rounded -translate-y-2 transition-all ctcbtn"
-        href="/contact"
-      >
-        contacto</a
-      >
-    </ul>
-    <button id="mobilebtn" class="btn z-10 menubtn text-white"> </button>
+  <a href="/" class="font-bold text-lg md:text-2xl" id="logo">FURZUA</a>
+
+  <div class="relative">
+
+    <button id="toggleButton" class="md:hidden flex" onclick="toggleNavVisibility()">
+      <img src="menu.svg" alt="menu" class="w-8">
+    </button>
     <ul
-    id="mobilenav"
-    class="md:hidden absolute flex text-black bg-white flex-col top-0 left-full justify-center items-center w-screen h-screen gap-8"
-  >
+    id="normalnav"
+    class="md:gap-8 hidden  md:relative text-sm lg:text-base md:bg-transparent md:flex-row md:p-2 md:top-0 md:right-0 bg-[#1A2029] p-4 flex md:flex flex-col top-10 right-0 absolute gap-4 w-40  rounded-lg items-center "
+    >
     {
       navbar.map((nav) => (
-        <li>
-          <a class="hover:underline text-lg mobilea" href={nav.url}>
+        <li class="hover:bg-gray-50 md:hover:bg-[#0E141B]">
+          <a
+            class="hover:text-[#2563EB] hover:underline text-md transition-all font-bold"
+            href={nav.url}
+            >
             {nav.name}
-            </a>
-            </li>
-            ))
-          }
-    <a class="hover:underline text-lg mobilea" href="/contact"> contacto</a>
+          </a>
+        </li>
+      ))
+    }
   </ul>
+  </div>
+  <script>
+    const navbar = document.querySelector(".navbar");
+    const links = document.querySelector("#normalnav");
+    document.getElementById("toggleButton").addEventListener("click", toggleNavVisibility);
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    function toggleNavVisibility() {
+      links.classList.toggle("hidden");
+    }
+
+  </script>
 </nav>
 
 <style>
   nav {
     transition: 0.5s ease;
+    backdrop-filter: none;
   }
-  .btn {
-    width: 30px;
+
+  .navbar.scrolled {
+    backdrop-filter: blur(20px); /* Apply blur on scroll */
+    background-color: rgba(
+      14,
+      20,
+      27,
+      0.6
+    ); /* Update background for contrast */
   }
-  .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  }
-  .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  }
-  .closebtn {
-    background-image: url("/close.svg");
-  }
-  .menubtn {
-    background-image: url("/menu.svg");
-  }
-  .menudarkbtn {
-    background-image: url("/menudark.svg");
-  }
-  #mobilenav {
-    transition: 0.4s ease;
-  }
-  .ctcbtn {
-    background: #684c44;
-  }
-  .ctcbtn:hover {
-    background: #533d37;
+
+  .hidden1{
+    display: none;
   }
 </style>

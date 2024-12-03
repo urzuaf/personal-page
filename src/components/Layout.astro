@@ -29,7 +29,7 @@ import Footer from "./Footer.astro";
     <meta name="author" content="Fernando Urzua">
     <title>Fernando Urzúa {"| " + title}</title>
   </head>
-  <body class="scroll-smooth overflowX-hidden">
+  <body class="scroll-smooth overflowX-hidden bg-[#0E141B] text-[#94A3B8]">
     <header class="relative">
       <Navbar />
     </header>
@@ -37,97 +37,7 @@ import Footer from "./Footer.astro";
     <Footer />
   </body>
   <script>
-    let width: number = window.innerWidth;
-    let mobilebtn = document.getElementById("mobilebtn");
-    let normalnav = document.getElementById("normalnav");
-    let mobilenav = document.getElementById("mobilenav");
-    let logo = document.getElementById("logo");
-    let mobileactive = true;
-    let mobilebtns = document.querySelectorAll(".mobilea")
-
-    for (let i = 0; i<mobilebtns.length; i++){
-      let btn = mobilebtns[i]
-      btn.addEventListener('click', ()=>{
-        console.log('here')
-        mobilebtn.click()
-      })
-    }
-
-    //let menu = document.createElement("span");
-    //let close = document.createElement("span");
-    //menu.classList.add("menubtn");
-    //close.classList.add("closebtn");
-    // menu.innerText = "menu";
-    // close.innerText = "close";
-    displayNavbar(width);
-    window.addEventListener("resize", () => {
-      width = window.innerWidth;
-      displayNavbar(width);
-    });
-
-    window.addEventListener("scroll", () => {
-      
-      const nav = document.querySelector("nav");
-      nav.classList.toggle("text-black", window.scrollY > 0);
-      nav.classList.toggle("bg-white", window.scrollY > 0);
-      if (window.scrollY > 0 && mobileactive) {
-        mobilebtn.classList.remove('menubtn')
-        mobilebtn.classList.add('menudarkbtn')
-        // mobilebtn.style.color = "black";
-        normalnav.style.color = "black";
-        logo.style.color = "black"
-      }
-      else if (window.scrollY == 0 && mobileactive ){
-        mobilebtn.classList.remove('closebtn')
-        mobilebtn.classList.remove('menudarkbtn')
-        mobilebtn.classList.add('menubtn')
-        normalnav.style.color = "white";
-        logo.style.color = "white"
-      } 
-      else {
-        // mobilebtn.classList.remove('menudarkbtn')
-        // mobilebtn.classList.remove('menubtn')
-        // mobilebtn.classList.add('closebtn')
-        // mobilebtn.style.color = "white";
-        normalnav.style.color = "white";
-        logo.style.color = "white"
-      }
-    });
-
-    mobilebtn.addEventListener("click", () => {
-      if (mobileactive) {
-        mobilenav.style.left = "0";
-        mobilebtn.classList.add('closebtn')
-        mobilebtn.classList.remove('menubtn')
-        mobilebtn.classList.remove('menudarkbtn')
-        // mobilebtn.replaceChildren(close);
-        // mobilebtn.style.color = "black";
-      } else {
-        mobilenav.style.left = "100%";
-        if(window.scrollY>0){
-          mobilebtn.classList.add('menudarkbtn')
-        }
-        else{
-          mobilebtn.classList.add('menubtn')
-        }
-        mobilebtn.classList.remove('closebtn')
-        // mobilebtn.replaceChildren(menu);
-        // window.scrollY > 0
-        //   ? (mobilebtn.style.color = "black")
-        //   : (mobilebtn.style.color = "white");
-      }
-      mobileactive = !mobileactive;
-    });
-
-    function displayNavbar(width: number) {
-      if (width > 768) {
-        mobilebtn.style.display = "none";
-        normalnav.style.display = "flex";
-      } else {
-        normalnav.style.display = "none";
-        mobilebtn.style.display = "flex";
-      }
-    }
+    
   </script>
 </html>
 
