@@ -7,22 +7,12 @@ import techs from "../data/technologies.json";
     <div class="px-20 py-10 m-auto">
       <h2 class="text-3xl font-semibold text-center text-white md:text-5xl">Tecnologias</h2>
     </div>
-    <!-- <p class="pa py-8 m-auto px-8 ">
-      Como desarrollador y diseñador web, mi caja de herramientas está compuesta
-      de tecnologías potentes que utilizo para crear experiencias digitales
-      excepcionales.
-      <br />
-      Estoy comprometido con el aprendizaje continuo y la exploración de nuevas tecnologías
-      emergentes, esto me permite brindar soluciones actualizadas y vanguardistas
-      que se mantienen al ritmo de las tendencias cambiantes y las demandas del mercado.
-    </p>
-  </div> -->
 
   <div id="techcontainer">
     {
       techs.map((tech) => (
         <div class="flex flex-col justify-center items-center">
-          <div class=" bg-[#1A2029] mx-4 lg:mx-auto w-fit rounded-3xl hidden1 flex gap-8 md:gap-20 m-auto px-8 md:px-20 py-8 justify-center  items-center mb-14 flex-col lg:flex-row text-center md:text-left">
+          <div class=" mx-4 lg:mx-auto w-fit  hidden1 flex gap-8 md:gap-20 m-auto px-8 md:px-20 py-8 justify-center  items-center mb-14 flex-col lg:flex-row text-center md:text-left rounded-lg shadow-2xl bg-gray-800 shadow-black/50 ">
             <img
               loading="eager"
               class="w-full md:w-96"
@@ -34,7 +24,7 @@ import techs from "../data/technologies.json";
               <p class="text-left">{tech.body}</p>
             </div>
           </div>
-          <div class=" bg-[#1A2029] mx-4 lg:mx-auto w-fit rounded-3xl hidden2 flex gap-8 md:gap-20 m-auto px-8 md:px-20 py-8 justify-center  items-center mb-14 flex-col lg:flex-row-reverse text-center md:text-left">
+          <div class="  mx-4 lg:mx-auto w-fit  hidden2 flex gap-8 md:gap-20 m-auto px-8 md:px-20 py-8 justify-center  items-center mb-14 flex-col lg:flex-row-reverse text-center md:text-left rounded-lg shadow-2xl bg-gray-800 shadow-black/50">
             <img
               loading="eager"
               class="w-full md:w-96"

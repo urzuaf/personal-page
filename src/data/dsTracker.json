@@ -1,7 +1,0 @@
-{
-    "title":"Dark souls tracker",
-    "problem":"Existen logros en dark souls para los cuales hay que llevar un seguimiento preciso de los objetos que se tienen dentro del juego, para evitar quedarse sin un objeto o tener que juegar un nuevo juego completo desde el comienzo, desarrollé esta herramienta que permite llevar un registro de los jefes derrotados y de los objetos que se han conseguido a lo largo del juego, además de indicaciónes de donde conseguir cada item.",
-    "Herramientas":"Svelte, Astro",
-    "Desarrollo":"Como debe ser una aplicación con permanencia de datos, se utiliza el almacenamiento local del navegador para guardar los items obtenidos de cada categoria, esta información es obtenida cada vez que se carga la página, en caso de no existir datos previamente guardados, la información se carga directamente de los archivos json base incluidos en la herramienta.",
-    "url":"https://urzuaf.github.io/darksoulstracker/"
-}

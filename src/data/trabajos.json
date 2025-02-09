@@ -1,36 +1,35 @@
 [
     {
+        "nombre": "Said",
+        "url":"/portfolio/said",
+        "descripción":"SAID es una herramienta que proporciona información rápida y útil sobre comandos de Linux. Con SAID, puedes obtener descripciones, ejemplos de uso y opciones avanzadas para cada comando",
+        "img":"/said.webp",
+        "tecnologias":"Go, Bash"
+    
+    },
+    {
         "nombre": "DBD",
-        "url":"/dbd",
-        "descripción":"Sistema de ayuda para revisiones de laboratorios y tareas del curso de diseño de bases de datos de mi universidad.",
+        "url":"/portfolio/dbd",
+        "descripción":"Sistema de ayuda para revisiones de laboratorios y tareas del curso de diseño de bases de datos",
         "img":"/dbd.webp",
-        "tecnologias": "astro"
+        "tecnologias": "Astro"
     },
     {
         "nombre": "Dark souls Tracker",
-        "url":"/dstracker",
-        "descripción":"Obtener todos los logros del juego Dark souls fue una experiencia gratificante, sin embargo, tenia el problema de saber que cosas ya había conseguido y cuales aún tenia pendientes, para esto desarrollé 'Dark souls tracker' que me permite llevar un registro de todo lo que he conseguido a lo largo de mi partida"
+        "url":"/portfolio/dstracker",
+        "descripción":"Dark souls tracker es una herramienta que permite llevar un registro de todos los logros conseguidos a lo largo de una partida"
         ,
         "img":"/ds_tracker.webp",
-        "tecnologias":"astro, svelte"
+        "tecnologias":"Astro, Svelte"
     
     },
-    {
-        "nombre": "Cocktails",
-        "url":"/cocktails",
-        "descripción":"Una de las partes esenciales del desarrollo frontend es el renderizar interfaces utilizando información obtenida de una REST API, en este caso, utilizando la api de 'TheCocktailsDB', desarrollé una simple interfaz gráfica en la que se puedan obtener diversos cocktails ya sea al azar o filtrando por un elemento especifico."
-        ,
-        "img":"/cocktails.webp",
-        "tecnologias":"astro, svelte"
-    
-    },
-    {
+   {
         "nombre": "Animedoro timer",
-        "url":"/animedoro",
-        "descripción":"Basada en la famosa tecnica pomodoro, la cual consiste en estudiar 25 minutos para posteriormente descansar 5, la tecnica animedoro plantea que 25 minutos no es suficiente para concentrarse y que 5 minutos es muy poco descanso, por lo que en animedoro se estudia durante 40 minutos y se pausa durante 20, lo suficiente para ver un capitulo de anime"
+        "url":"/portfolio/animedoro",
+        "descripción":"Animedoro es una herramienta que permite configurar intervalos de estudio y descanso, buscando aplicar una variación del conocido método pomodoro"
         ,
         "img":"/animedoro.webp",
-        "tecnologias":"svelte"
+        "tecnologias":"Svelte"
     }
 
 ]

@@ -1,7 +1,0 @@
-{
-    "title":"Cocktails",
-    "problem":"A veces queremos beber algo, e ir a un bar puede resultar bastante costoso, en cocktails puedes recibir un cocktail aleatorio con solo apretar un botón, o en caso de no ser fanaticos del azar, se pueden recibir decenas de opciones filtrando los resultados por diversos ingredientes populares",
-    "Herramientas":"Astro, Svelte",
-    "Desarrollo":"Primero que nada es necesario familiarizarse con las respuestas de la API, saber si retorna un arreglo o un objeto, y saber que propiedades llamar para no obtener errores. Las respuestas de esta API son bastante extrañas, por ejemplo, al pedir un cocktail aleatorio retorna un objeto que contiene un arreglo de un solo objeto en el cual se encuentra la información, sin embargo, a pesar de tener que hacer malabares con la información se logró crear una página funcional.",
-    "url":"https://urzuaf.github.io/Cocktails/"
-}

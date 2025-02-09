@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../components/Layout.astro";
+
+const posts : any = Object.values(import.meta.glob('../../content/trabajos/*.md', { eager: true }));
+let post = posts.filter(post => post.frontmatter.name.toLowerCase() === Astro.params.slug.toLowerCase());
+
+export async function getStaticPaths() {
+  const trabajos = await getCollection("trabajos"); 
+
+  return trabajos.map((trabajo) => ({
+    params: { slug: trabajo.slug },
+    props: { trabajo },
+  }));
+}
+
+post = post[0];
+let title = post.frontmatter.title;
+let url = post.frontmatter.url;
+let tools = post.frontmatter.herramientas;
+let cont = await post.Content();
+cont = cont.props.children;
+
+//posts.filter(post => post.frontmatter.title === Astro.params);
+---
+  lel
+ <Layout title={post.frontmatter.title}>
+  <section class="mt-40 px-4 md:w-1/2 mx-auto flex flex-col gap-4">
+
+    <h1 class="text-3xl md:text-5xl font-semibold text-white text-center">{title}</h1>
+    <h2 class="text-[#2563eb] text-center text-xl">Herramientas : {tools}</h2>
+    <article class="text-md/8 flex flex-col gap-4 my-4">
+      {cont}
+    </article>
+    
+    <a href={url} class="bg-[#2563eb] text-white rounded-lg p-4 text-center mb-4" target="_blank" >Ver en vivo</a>
+    <a href="/portfolio" class="text-[#2563eb]">← Volver a la lista</a>
+  </section>
+</Layout>
