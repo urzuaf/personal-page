@@ -1,131 +1,26 @@
 ---
 import Layout from "../components/Layout.astro";
-import { Image } from "astro:assets";
-import about_img from "../assets/about.webp";
+import { Content as Contenido } from "../content/about.md";
+
 ---
 
 <Layout title="Acerca de">
-
-    <div class="md:pt-20 pt-20 flex items-center justify-center gap-4 md:gap-20  text-white w-screen flex-col md:flex-row-reverse pb-4 ">
-        <!-- <Image
-        loading="eager"
-        quality={"mid"}
-        src={about_img}
-        alt="imagen en un parque"
-        width="450"
-        height="400"
-        class="shadow-xl mb-8 md:mb-10 md:mt-10 image "
-        />
-    -->
-        <div class="md:py-4 text-center flex flex-col gap-4">
-            <h1 class="text-3xl md:text-5xl font-semibold  ">
-              ¡Hola otra vez!
-            </h1>
-            <h2 class="text-2xl md:text-4xl font-semibold">
-                Mi nombre es Fernando 
-            </h2>
-        </div>
+  <section
+    class="md:pt-20 pt-20 flex md:gap-20 flex-col md:w-3/5 mx-auto p-4 gap-10"
+  >
+    <div class="md:py-4 text-white text-center flex flex-col gap-4">
+      <h1 class="text-3xl md:text-5xl font-semibold">¡Hola otra vez!</h1>
+      <h2 class="text-2xl md:text-4xl font-semibold">Mi nombre es Fernando</h2>
     </div>
-  <div class="pt-20 pb-40 mx-auto w-full p-8 md:p-20">
-    <div class="flex justify-center flex-col gap-4 items-center">
-      <div class="pb-10 flex flex-col gap-4">
-        <h3 class="text-xl md:text-3xl font-medium text-white">Sobre mí</h3>
-        <p>
-          Mi nombre es Fernando Urzúa, desarrollador 
-          web fullstack con un amor por la creación de
-          experiencias digitales sorprendentes.
-        </p>
-      </div>
-      <div class="pb-10 flex flex-col gap-4">
-        <h3 class="text-xl md:text-3xl font-medium text-white">Lo que hago</h3>
-        <p>
-          Mi enfoque combina una sólida experiencia en desarrollo y diseño.
-          Trabajo con un amplio espectro de tecnologías, desde la creación de
-          sitios web interactivos, diseño de interfaces, desarrollo backend y DevOps con sistemas linux en plataformas como AWS o GCP. 
-          Me apasiona la colaboración y trabajar de
-          cerca con mis clientes para entender sus objetivos y crear soluciones
-          que superen sus expectativas.
-        </p>
-      </div>
-      <div class="pb-10 flex flex-col gap-4">
-        <h3 class="text-xl md:text-3xl font-medium text-white">Mi historia</h3>
-        <p>
-          Desde una temprana edad, siempre estuve fascinado por la tecnología , Aunque mi primer acercamiento a la programación fue cuando
-          comencé la carrera de ingenieria civil en computación en la
-          universidad de Talca. Precisamente en la universidad fue donde
-          descubrí que una de mis ramas favoritas de la computación es el
-          desarrollo web, esto me motivó a no solo conformarme con los
-          conocimientos otorgados por la institución y comenzar a estudiar tecnologias web más a fondo 
-          utilizando otros recursos online como <a
-            href="https://www.freecodecamp.org/"
-            target="_blank">freecodecamp</a
-          >, youtube y además leyendo mucha documentación.
-          <br />
-          <br />
-          Como ya contaba con bases en HTML, CSS y JS mi siguiente paso fue enfocarme en
-          aprender un framework de desarrollo frontend, comencé con react debido
-          a que gracias a su popularidad se puede encontrar facilmente documentación
-          y librerias de la comunidad.
-          <br />
-          <br />
-          Una vez que conseguí un nivel medio en react comencé a aprender un poco
-          de backend, principalmente me enfoqué en la manipulación de bases de datos mediante
-          la creación de REST APIs, esto con el fin de poder crear aplicaciones realmente utiles, para la creación de estos backends utilicé nodejs
-          junto con express debido a que de manera similar a react, esta combinación
-          cuenta con gran documentación online.
-          <br />
-          <br />
-          He experimentado con distintos lenguajes y frameworks para poder elegir
-          las tecnologias más adecuadas para resolver los problemas a los que me enfrento, esto me permite diferenciar
-          cuando usar generadores de sitios estaticos como astro, cuando usar frameworks
-          como react o svelte por si solos y cuando usar metaframeworks como sveltekit
-          o nextjs.
-          <br />
-          <br />
-          Además del desarrollo web fullstack, cuento con conocimientos en el manejo de sistemas Linux, tanto a nivel de daily driver con fedora como a nivel de 
-          servidores, ya que me ha tocado trabajar con ubuntu y debian server en proyectos de Google cloud y Amazon linux en proyectos de AWS.
-        </p>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h3 class="text-xl md:text-3xl font-medium text-white">¿Listo para colaborar?</h3>
-        <p>
-          Si tienes un proyecto desafiante, ¡estoy listo
-          para sumergirme en ello! Estoy deseando conocer más sobre tu visión y
-          trabajar juntos para convertirla en realidad. No dudes en ponerte en
-          contacto conmigo. ¡Gracias por visitar mi sitio web y espero tener la
-          oportunidad de trabajar contigo!
-        </p>
-      </div>
-    </div>
-  </div>
+    <article class="text-md/7 flex flex-col gap-4 md:p-4">
+      <Contenido />
+      <p>
+        Si buscas a alguien que combine desarrollo, infraestructura y análisis,
+        estaré encantado de ayudarte. ¡<a
+          href="/#contacto"
+          class="text-[#2563EB]">Contáctame</a
+        > y hagamos realidad tu proyecto!
+      </p>
+    </article>
+  </section>
 </Layout>
-<style>
-  p {
-    max-width: 60ch;
-    opacity: 0.9;
-  }
-  .btn {
-    padding: 16px 36px;
-    transition: 0.3s ease;
-    background: #684c44;
-    color: white;
-  }
-  .btn:hover {
-    background: #533d37;
-    transition: 0.3s ease;
-  }
-  .image{
-    border-radius: 50%;
-    max-width: 50%;
-    margin-right: 1rem;
-    margint-top:2.5rem;
-  }
-  @media (max-width:450px) {
-    .image{
-        margin-right: 0;
-        margin-top: -0.25rem;
-        border-radius: 0px;
-        max-width:100% ;
-    }
-  }
-</style>
