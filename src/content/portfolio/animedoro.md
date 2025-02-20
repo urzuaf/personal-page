@@ -1,8 +1,12 @@
 ---
 name: "animedoro"
-title : "Animedoro"
+title : "Animedoro Timer"
 url: "https://urzuaf.github.io/animedoro/"
 herramientas: "Svelte"
+insidelink: "/portfolio/animedoro"
+descripcion: "Animedoro es una herramienta que permite configurar intervalos de estudio y descanso, buscando aplicar una variación del conocido método pomodoro"
+imagen: "/animedoro.webp"
+orden: "1"
 ---
 Tras conocer la técnica de **Animedoro**, decidí implementarla como método de estudio para mis exámenes universitarios. Los resultados fueron bastante positivos, lo que me llevó a adoptarla como mi estrategia principal de estudio.
 

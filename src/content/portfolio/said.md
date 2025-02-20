@@ -1,8 +1,12 @@
 ---
 name: "said"
 title: "SAID"
+insidelink: /portfolio/said
 url: "https://urzuaf.github.io/said/"
 herramientas: "Go, Bash"
+descripcion: "SAID es una herramienta que proporciona información rápida y útil sobre comandos de Linux. Con SAID, puedes obtener descripciones, ejemplos de uso y opciones avanzadas para cada comando"
+imagen: "/said.webp"
+orden: "4"
 ---
 
 **SAID** es una herramienta diseñada para facilitar la consulta y comprensión de comandos de Linux. Esta aplicación proporciona una manera rápida y accesible de obtener descripciones, ejemplos de uso y opciones avanzadas de los comandos más utilizados en Linux. 
